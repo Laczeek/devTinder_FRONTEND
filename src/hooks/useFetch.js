@@ -26,10 +26,12 @@ export default function useFetch() {
 		if (!response.ok && response.status === 401) {
 			navigate('/login');
 			authCTX.clearContext();
-			toastCTX.showToast(
-				'Your session has expired. Please log in.',
-				'error'
-			);
+			if (options?.method && options?.method !== 'GET') {
+				toastCTX.showToast(
+					'Your session has expired. Please log in.',
+					'error'
+				);
+			}
 		}
 
 		if (!response.ok) {
