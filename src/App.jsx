@@ -6,6 +6,7 @@ import FeedPage from './pages/FeedPage';
 import ProfilePage from './pages/ProfilePage';
 import ConnectionsPage from './pages/ConnectionsPage';
 import RequestsPage from './pages/RequestsPage';
+import ChatPage from './pages/ChatPage';
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Route path='profile' element={<ProfilePage />} />
 					<Route path='connections' element={<ConnectionsPage />} />
 					<Route path='requests' element={<RequestsPage />} />
+					<Route path='chat/:uid' element={<ChatPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

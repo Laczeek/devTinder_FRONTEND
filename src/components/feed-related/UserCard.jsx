@@ -39,7 +39,7 @@ export default function UserCard({ user, handleConnectionRequest, isLoading }) {
 				<img
 					src={user.photoURL}
 					alt='User image'
-					className='object-cover max-h-[280px] w-full'
+					className='object-cover h-[280px] w-full'
 				/>
 			</figure>
 			<div className='card-body'>

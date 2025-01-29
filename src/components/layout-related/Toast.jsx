@@ -15,7 +15,7 @@ export default function Toast() {
 						: 'alert-error'
 				}`}
 			>
-				<span>{toastCTX.toast.message}</span>
+				<span className='text-wrap'>{toastCTX.toast.message}</span>
 			</div>
 		</div>
 	);

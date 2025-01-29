@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 export default function ConnectionCard({ connection }) {
 	const { ourMatch, createdAt } = connection;
 
@@ -10,7 +12,7 @@ export default function ConnectionCard({ connection }) {
 					className='w-20 h-20 object-cover rounded-full'
 				/>
 			</figure>
-			<div>
+			<div className='grow'>
 				<h3 className='font-bold text-lg'>
 					{ourMatch.firstName} {ourMatch.lastName}
 				</h3>
@@ -24,6 +26,12 @@ export default function ConnectionCard({ connection }) {
 					Connected since {new Date(createdAt).toLocaleDateString()}
 				</p>
 			</div>
+			<Link
+				className='btn btn-primary self-center'
+				to={`/chat/${ourMatch._id}`}
+			>
+				Chat
+			</Link>
 		</div>
 	);
 }
