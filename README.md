@@ -1,8 +1,31 @@
-# React + Vite
+![Logo](./public/logo.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Dev Tinder
 
-Currently, two official plugins are available:
+Portal for making new contacts with other developers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Check out the live site: [Dev Tinder](https://dev-tinder.online)
+
+## Built With
+-   [Vite](https://vite.dev/)
+-   [React Router](https://reactrouter.com/)
+-   [DaisyUI](https://daisyui.com/)
+-   [TailwindCSS](https://tailwindcss.com/)
+-   [SocketIO](https://socket.io/)
+
+## To do
+- Add email verification
+
+## Contact
+-   Email: [patryk.popiela01@gmail.com](mailto:patryk.popiela01@gmail.com)
+-   GitHub: [Laczeek](https://github.com/Laczeek)
+
+## Backend
+[Check out the backend repository](https://github.com/Laczeek/devTinder_BACKEND)
+
+## Test it locally
+- Clonse the repository & Install the dependencies
+- Create .env file and add VITE_BACKEND_URL variable with url to your backend application
+- Run npm run dev
+
+### Hosted on AWS EC2 instance using Nginx
