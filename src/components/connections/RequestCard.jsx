@@ -2,14 +2,16 @@ export default function RequestCard({ request, reviewRequest, isLoading }) {
 	const { sender, createdAt, _id } = request;
 
 	return (
-		<div className='card card-side bg-base-300 p-4 gap-x-6'>
-			<figure>
-				<img
-					src={sender.photoURL}
-					alt='User image'
-					className='w-20 h-20 object-cover rounded-full'
-				/>
-			</figure>
+		<div className='card card-side bg-base-300 p-4 gap-x-3'>
+			<div className='flex justify-center items-center'>
+				<figure>
+					<img
+						src={sender.photoURL}
+						alt='User image'
+						className='w-20 h-20 object-cover rounded-full'
+					/>
+				</figure>
+			</div>
 			<div className='grow'>
 				<h3 className='font-bold text-lg'>
 					{sender.firstName} {sender.lastName}
@@ -19,7 +21,9 @@ export default function RequestCard({ request, reviewRequest, isLoading }) {
 						{sender.gender}, {sender.age}
 					</p>
 				)}
-				<p className='my-1'>{sender.about}</p>
+				<p className='my-1 overflow-y-auto max-h-[150px]'>
+					{sender.about}
+				</p>
 				<p className='text-xs text-yellow-200'>
 					Request send {new Date(createdAt).toLocaleDateString()}
 				</p>
