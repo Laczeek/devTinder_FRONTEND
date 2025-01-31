@@ -7,7 +7,7 @@ import ProfilePage from './pages/ProfilePage';
 import ConnectionsPage from './pages/ConnectionsPage';
 import RequestsPage from './pages/RequestsPage';
 import ChatPage from './pages/ChatPage';
-import NotFound from './pages/NotFound';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
 	return (
@@ -20,7 +20,7 @@ function App() {
 					<Route path='connections' element={<ConnectionsPage />} />
 					<Route path='requests' element={<RequestsPage />} />
 					<Route path='chat/:uid' element={<ChatPage />} />
-					<Route path='*' element={<NotFound />} />
+					<Route path='*' element={<NotFoundPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

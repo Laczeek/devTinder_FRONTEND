@@ -22,7 +22,7 @@ export default function ConnectionCard({ connection }) {
 					</p>
 				)}
 				<p className='my-1'>{ourMatch.about}</p>
-				<p className='text-xs text-yellow-200'>
+				<p className='text-xs text-yellow-600 dark:text-yellow-200'>
 					Connected since {new Date(createdAt).toLocaleDateString()}
 				</p>
 			</div>

@@ -7,12 +7,10 @@ import LoadingBall from './LoadingBall';
 export default function ProtectRoutes({ children }) {
 	const authCTX = useContext(authContext);
 	const location = useLocation();
-
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (location.pathname === '/login' || authCTX.auth.isAuthenticated)
-			return;
+		if (authCTX.auth.isAuthenticated) return;
 
 		const fetchUserData = async () => {
 			try {
@@ -31,6 +29,9 @@ export default function ProtectRoutes({ children }) {
 				}
 
 				authCTX.login(data.user);
+				if (location.pathname === '/login') {
+					navigate('/');
+				}
 			} catch (err) {
 				console.error(err.message);
 			} finally {
@@ -43,7 +44,10 @@ export default function ProtectRoutes({ children }) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	if (!authCTX.auth.isAuthenticated && location.pathname !== '/login')
+	if (
+		(!authCTX.auth.isAuthenticated && location.pathname !== '/login') ||
+		authCTX.auth.isLoading
+	)
 		return (
 			<div className='text-center mt-24'>
 				<LoadingBall />

@@ -51,7 +51,8 @@ export default function FeedPage() {
 	return (
 		<section className='mt-10'>
 			{users.length === 0 && (
-				<h2 className='text-xl text-center text-green-200'>
+				<h2 className='text-xl text-center '>
+					<span className='block text-5xl'>🤷‍♂️</span>
 					There are no users to show.
 				</h2>
 			)}

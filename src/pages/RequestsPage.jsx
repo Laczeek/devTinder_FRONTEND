@@ -6,7 +6,7 @@ import RequestCard from '../components/connections/RequestCard';
 export default function RequestsPage() {
 	const { sendRequest, isLoading } = useFetch();
 	const { sendRequest: sendUpdateRequest } = useFetch();
-    
+
 	const [requests, setRequests] = useState(null);
 	const [hideButtons, setHideButtons] = useState(null);
 
@@ -53,7 +53,8 @@ export default function RequestsPage() {
 				Connection Requests
 			</h2>
 			{requests.length === 0 && (
-				<p className='text-center text-green-200'>
+				<p className='text-center text-lg'>
+					<span className='block text-5xl'>🙇‍♂️</span>
 					No one has tried to make a connection with you yet.
 				</p>
 			)}

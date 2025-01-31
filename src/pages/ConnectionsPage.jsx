@@ -36,7 +36,8 @@ export default function ConnectionsPage() {
 				Your Connections
 			</h2>
 			{connections.length === 0 && (
-				<p className='text-center text-green-200'>
+				<p className='text-center text-lg'>
+					<span className='block text-5xl'>🙇‍♂️</span>
 					You don&apos;t have any connections yet.
 				</p>
 			)}
